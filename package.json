@@ -1,0 +1,16 @@
+{
+  "name": "turneria-consultorios",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cmd /d /s /c \"cd /d D:\\dev\\turneria && node .\\node_modules\\next\\dist\\bin\\next dev\"",
+    "build": "cmd /d /s /c \"cd /d D:\\dev\\turneria && node .\\node_modules\\next\\dist\\bin\\next build\"",
+    "start": "cmd /d /s /c \"cd /d D:\\dev\\turneria && node .\\node_modules\\next\\dist\\bin\\next start\""
+  },
+  "dependencies": {
+    "jose": "^6.2.1",
+    "next": "15.5.13",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  }
+}
