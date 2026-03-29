@@ -8,7 +8,8 @@ export const dynamic = "force-dynamic";
 
 export async function GET() {
   return NextResponse.json({
-    ...getClinicViewModel(),
+    ...(await getClinicViewModel()),
     generatedAt: new Date().toISOString()
   });
 }
+

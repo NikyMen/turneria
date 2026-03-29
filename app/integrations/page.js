@@ -6,8 +6,8 @@ import { getClinicViewModel } from "@/lib/clinic-view-model";
 
 export const dynamic = "force-dynamic";
 
-export default function IntegrationsRoutePage() {
-  const data = getClinicViewModel();
+export default async function IntegrationsRoutePage() {
+  const data = await getClinicViewModel();
 
   return (
     <DashboardShell>
@@ -15,3 +15,4 @@ export default function IntegrationsRoutePage() {
     </DashboardShell>
   );
 }
+

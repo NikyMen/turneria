@@ -1,0 +1,47 @@
+runConfig:
+  cpu: 1
+  memoryMiB: 512
+  maxInstances: 2
+  concurrency: 80
+
+env:
+  - variable: FIREBASE_USE_FIRESTORE
+    value: "true"
+  - variable: FIREBASE_CLINIC_ID
+    value: "default"
+  - variable: FIREBASE_ADMIN_PROJECT_ID
+    value: "turneria-consultoriadigital"
+  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+    value: "AIzaSyABPCz6vScvUMzzvpARt0bcTA0Q9FIDqpM"
+  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+    value: "turneria-consultoriadigital.firebaseapp.com"
+  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+    value: "turneria-consultoriadigital"
+  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+    value: "turneria-consultoriadigital.firebasestorage.app"
+  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+    value: "235590189397"
+  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+    value: "1:235590189397:web:d2f6053cb135a09e54efdc"
+  - variable: NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+    value: "G-4K374151KR"
+  - variable: AUTH_JWT_EXPIRES_IN
+    value: "12h"
+  - variable: AUTH_COOKIE_NAME
+    value: "turneria_session"
+  - variable: GOOGLE_CALENDAR_TIMEZONE
+    value: "America/Argentina/Cordoba"
+  - variable: NEXT_PUBLIC_USER_EMAIL
+    value: "gonzalo@consultoriadigital.io"
+
+  # Before the first rollout, create these secrets and keep the names as-is:
+  # npx.cmd firebase-tools apphosting:secrets:set authLoginEmail --project turneria-consultoriadigital
+  # npx.cmd firebase-tools apphosting:secrets:set authLoginPassword --project turneria-consultoriadigital
+  # npx.cmd firebase-tools apphosting:secrets:set authJwtSecret --project turneria-consultoriadigital
+  - variable: AUTH_LOGIN_EMAIL
+    secret: authLoginEmail
+  - variable: AUTH_LOGIN_PASSWORD
+    secret: authLoginPassword
+  - variable: AUTH_JWT_SECRET
+    secret: authJwtSecret
+

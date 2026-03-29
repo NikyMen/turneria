@@ -4,8 +4,8 @@ import { DashboardShell } from "@/components/dashboard-shell";
 import { DoctorsPage } from "@/components/doctors-page";
 import { getClinicViewModel } from "@/lib/clinic-view-model";
 
-export default function DoctorsRoutePage() {
-  const data = getClinicViewModel();
+export default async function DoctorsRoutePage() {
+  const data = await getClinicViewModel();
 
   return (
     <DashboardShell>
@@ -13,3 +13,4 @@ export default function DoctorsRoutePage() {
     </DashboardShell>
   );
 }
+

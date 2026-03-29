@@ -8,7 +8,7 @@ import { getGoogleCalendarAgenda } from "@/lib/google-calendar";
 export const dynamic = "force-dynamic";
 
 export default async function CalendarRoutePage() {
-  const baseData = getClinicViewModel();
+  const baseData = await getClinicViewModel();
   const agenda = await getGoogleCalendarAgenda(baseData.calendar);
 
   return (
@@ -21,3 +21,4 @@ export default async function CalendarRoutePage() {
     </DashboardShell>
   );
 }
+

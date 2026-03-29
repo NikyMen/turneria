@@ -1,16 +1,24 @@
 {
-  "name": "turneria-consultorios",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "jose": "^6.2.1",
-    "next": "15.5.13",
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
-  }
+    "name":  "turneria-consultorios",
+    "version":  "0.1.0",
+    "private":  true,
+    "scripts":  {
+                    "dev":  "next dev",
+                    "build":  "next build",
+                    "start":  "next start",
+                    "seed:firestore":  "node scripts/seed-firestore.mjs",
+                    "deploy:firestore": "npx firebase-tools deploy --only firestore --project turneria-consultoriadigital",
+                    "firebase:projects": "npx firebase-tools projects:list"
+                },
+    "dependencies":  {
+                         "firebase":  "^12.11.0",
+                         "firebase-admin":  "^13.7.0",
+                         "jose":  "^6.2.1",
+                         "next":  "15.5.13",
+                         "react":  "19.0.0",
+                         "react-dom":  "19.0.0"
+                     },
+    "devDependencies":  {
+                            "firebase-tools":  "^15.12.0"
+                        }
 }

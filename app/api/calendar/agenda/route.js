@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export async function GET() {
-  const baseData = getClinicViewModel();
+  const baseData = await getClinicViewModel();
   const agenda = await getGoogleCalendarAgenda(baseData.calendar);
 
   return NextResponse.json(
